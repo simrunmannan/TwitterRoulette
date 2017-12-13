@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Computer;
+    src: url(fonts/computerpixel-7.ttf);
+}
+
+body {
+    background: url("img/wood.jpg");
+    margin: 0px;
+}
+
+#container {
+    width: 100%;
+    position: relative;
+
+}
+
+#screen {
+  width: 46.625em;
+  height: 37.25em;
+  display: inline-block;
+  z-index: 1;
+  float: left;
+  margin-top: 8%;
+  margin-left:0;
+  background-image: url("img/screen.png");
+  background-size: 100%;
+  text-transform: uppercase;
+
+}
+
+#screen-text2, #screen-text, #welcome{
+  padding-left:  4.8em;
+  margin: 0 auto 0; 
+  letter-spacing: .10em; /* Adjust as needed */ 
+  width: 60%;
+  overflow: scroll;
+  font-family: Computer;
+  font-size: 1.8em;
+  display: inline-block;
+}
+
+
+#screen-text {
+  height: 7em;
+  margin-top:-2em; 
+}
+
+#welcome{
+  width: 62%;
+  margin: 3.8em auto 0;
+}
+
+#screen-text2 {
+  height: 7em;
+  color:#8b0000;
+  margin: -.1em auto 0;
+}
+
+.cursor:after {
+    content:"_";
+    opacity: 0;
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#briefCase {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 10%;
+    height:31.25em;
+    width:43.75em;
+    background-image: url("img/briefcase1.png");
+    background-size: 100%;
+    position: absolute;
+    animation: animateCase 3s;
+    animation-fill-mode: forwards;
+    float: left;
+}
+
+
+
+
+@-webkit-keyframes animateCase {
+0%           { background:url('img/briefcase1.png') 0 0; }
+25%          { background:url('img/briefcase1.png') 0 0; }
+50%          { background:url('img/briefcase2.png') 0 0; }
+75%          { background:url('img/briefcase3.png') 0 0; }
+100%         { background:url('img/briefcase4.png') 0 0; }
+}
+
+button#ledon-button {
+  outline: none;
+  background : #CC0000;
+  width: 9.6em;
+  height: 9.6em;
+  margin-left: 43.5%;
+  margin-top: 27%;
+  position: absolute;
+  z-index: 1;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  animation:animateButton 7s;
+  cursor: pointer;
+
+}
+
+
+
+@-webkit-keyframes animateButton {
+0%           { visibility: hidden;}
+50%          { visibility: hidden;}
+100%         { visibility: visible;}
+}
+
+
+button#ledon-button:active {
+  box-shadow: -2px 2px 2px rgba(51,0,0,1);
+}
+
+
+
+
+
